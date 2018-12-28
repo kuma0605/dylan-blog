@@ -32,8 +32,8 @@ function Bio() {
               {<br/>}
               A senior front-end engineer.
               {' '}
-              {<a href={data.aboutMe.fields.slug}>
-                more info
+              {<a href="/about">
+                About me
               </a>}
             </p>
           </div>
@@ -58,11 +58,6 @@ const bioQuery = graphql`
         social {
           twitter
         }
-      }
-    }
-    aboutMe: markdownRemark(fileAbsolutePath:{regex:"/other/aboutMe\\.md/"}){
-      fields {
-        slug
       }
     }
   }
