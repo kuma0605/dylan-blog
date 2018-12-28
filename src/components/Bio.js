@@ -32,8 +32,8 @@ function Bio() {
               {<br/>}
               A senior front-end engineer.
               {' '}
-              {<a href={'https://github.com/kuma0605'}>
-                Github
+              {<a href={data.aboutMe.fields.slug}>
+                more info
               </a>}
             </p>
           </div>
@@ -45,7 +45,7 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(relativePath: { regex: "/avatar.jpeg/" }) {
+    avatar: file(relativePath: { eq: "avatar.jpeg" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed
@@ -58,6 +58,11 @@ const bioQuery = graphql`
         social {
           twitter
         }
+      }
+    }
+    aboutMe: markdownRemark(fileAbsolutePath:{regex:"/other/aboutMe\\.md/"}){
+      fields {
+        slug
       }
     }
   }
