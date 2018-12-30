@@ -15,7 +15,11 @@ date: "2018-12-26"
 deepReplace.js
 - 全局遍历scss文件(我的本地项目为scss文件，可自行替换)
 - 正则替换(xx)px到(xx/2)px
+```
+    /(\d+(\.\d+)?)px/g //可能会含有小数
+```
 
+完整代码
 ```
 var fs = require('fs');
 var path = require('path');
