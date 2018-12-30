@@ -1,5 +1,5 @@
 .container{
-  /* background-repeat:no-repeat; */
-  background-size: 100% 100%;
+  background-size: 100%;
+  background-repeat: repeat-y;
   min-height: 100vh;
 }
