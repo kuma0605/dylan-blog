@@ -71,7 +71,7 @@ class Layout extends React.Component {
           margin: `${rhythm(1.5)} ${rhythm(6 / 4)}`,
           padding: `${rhythm(1)} ${rhythm(4 / 4)}`,
           position: "relative",
-          backgroundColor:'#ffffffc4'
+          backgroundColor:'#ffffffe6'
           
         }}
       >
