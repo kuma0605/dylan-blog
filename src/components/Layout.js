@@ -58,7 +58,7 @@ class Layout extends React.Component {
       )
     }
     const imageData = data.wallPaper.childImageSharp.fluid
-    console.log(imageData)
+    
     return (
       <BackgroundImage 
         className={layoutStyle.container}
@@ -68,11 +68,11 @@ class Layout extends React.Component {
           marginLeft: `auto`,
           marginRight: `auto`,
           // maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(8 / 4)}`,
+          margin: `${rhythm(1.5)} ${rhythm(6 / 4)}`,
+          padding: `${rhythm(1)} ${rhythm(4 / 4)}`,
           position: "relative",
+          backgroundColor:'#ffffffc4'
           
-          width:`100%`,
-          height:`100%`
         }}
       >
         {header}
